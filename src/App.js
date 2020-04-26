@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+// import Jsx from './Jsx';
+// import Render from './Render';
+// import { Welcome, Thanks, Composition } from './Components';
+import Clock from './State';
+import Toggle from './Events';
+import { Greeting, LoginControl, Mailbox, messages, Page } from './Cond-Rendering';
+import { NumberList, numbers, Blog, posts } from './Keys';
+import { NameForm, EssayForm, FlavorForm, Reservation } from './Forms';
+import Calculator from './Lifting-State';
+import { WelcomeDialog, SignUpDialog } from './Containment';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				{/* <Jsx />
+				<Welcome name="Ryan" />
+				<Thanks name="Tony" />
+				<Composition /> */}
+				<Clock />
+				{/* <Toggle />
+				<LoginControl />
+				<Mailbox unreadMessages={messages} />
+				<Page />
+				<NumberList numbers={numbers} /> 
+				<Blog posts={posts} />
+				<NameForm />
+				<EssayForm />
+				<FlavorForm />
+				<Reservation />*/}
+				<Calculator />
+				<WelcomeDialog />
+				<SignUpDialog />
+			</div>
+		);
+	}
 }
 
 export default App;
